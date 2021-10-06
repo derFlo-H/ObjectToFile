@@ -16,7 +16,7 @@ class TestMain {
 	
 	@Test
 	void testFileWrite() {
-		FileIO.write("len.txt","1234");
+		FileIO.write("len","1234");
 		assertTrue(FileIO.read("len").equals("1234"));
 		
 	}

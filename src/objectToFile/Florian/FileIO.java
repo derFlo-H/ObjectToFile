@@ -1,6 +1,7 @@
 package objectToFile.Florian;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.util.Scanner;
 
 /*
@@ -32,8 +33,21 @@ public class FileIO {
 		
 	}
 
-	public static void write(String string, String string2) {
-		
+	public static void write(String fileName, String fileOutput) {
+		FileWriter out;
+		File fileOut;
+		try {
+			fileOut = new File(fileName + ".txt");
+			fileOut.createNewFile();
+			
+			out = new FileWriter(fileOut);
+			out.write(fileOutput);
+			out.close();
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			
+		}
 		
 	}
 	
