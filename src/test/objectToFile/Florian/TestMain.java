@@ -9,15 +9,15 @@ import objectToFile.Florian.FileIO;
 class TestMain {
 
 	@Test
-	void testFileInput() {
-		assertTrue(FileIO.read("flo.txt") == "1234");
+	void testFileRead() {
+		assertTrue(FileIO.read("flo").equals("1234"));
 		
 	}
 	
 	@Test
-	void testFileOutput() {
+	void testFileWrite() {
 		FileIO.write("len.txt","1234");
-		assertTrue(FileIO.read("len.txt") == "1234");
+		assertTrue(FileIO.read("len").equals("1234"));
 		
 	}
 
