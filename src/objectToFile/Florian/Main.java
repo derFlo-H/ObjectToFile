@@ -10,7 +10,9 @@ package objectToFile.Florian;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		TestObject a = new TestObject("a", 1003);
+		FileIO.writeObject("a.txt", a);
 
 	}
 

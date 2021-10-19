@@ -1,7 +1,9 @@
 package objectToFile.Florian;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 /*
@@ -32,7 +34,27 @@ public class FileIO {
 		return output;
 		
 	}
-
+	
+	public static void writeObject(String fileName, Object fileOutput) {
+		
+		FileOutputStream file;
+		ObjectOutputStream obj;
+		
+		try {
+			
+			file = new FileOutputStream(fileName);
+			obj = new ObjectOutputStream(file);
+			obj.writeObject(fileOutput);
+			obj.close();
+			
+		} catch(Exception e) {
+			
+			e.printStackTrace();
+			
+		}
+		
+	}
+	
 	public static void write(String fileName, String fileOutput) {
 		FileWriter out;
 		File fileOut;
