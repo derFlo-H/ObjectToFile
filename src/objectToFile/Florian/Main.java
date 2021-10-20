@@ -13,7 +13,10 @@ public class Main {
 		
 		TestObject a = new TestObject("a", 1003);
 		FileIO.writeObject("a.txt", a);
-
+		
+		TestObject b = (TestObject) FileIO.readObject("a.txt");
+		b.printProps();
+		
 	}
 
 }
